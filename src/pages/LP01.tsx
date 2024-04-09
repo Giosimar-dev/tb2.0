@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 function TabuQuebrado01() {
   const [formattedDate, setFormattedDate] = useState("");
 
+  const handleClick = () => {
+    window.location.href = "https://pay.hotmart.com/U84454802C?off=06nqtnoa&checkoutMode=10&src=tabucode01";
+  };
+
   useEffect(() => {
     // Configuração da data
     const dayNames = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
@@ -59,7 +63,7 @@ function TabuQuebrado01() {
         <h3 className="text-2xl">,90</h3>
       </div>
       <div className="text-center mt-5">
-        <Button className="p-10 bg-green-600 animate-bounce">
+        <Button className="p-10 bg-green-600 animate-bounce" onClick={handleClick}>
           <p>
             <span className="text-4xl">CLIQUE AQUI</span>
             <br />
@@ -71,6 +75,40 @@ function TabuQuebrado01() {
         <p>Você vai receber videoaulas gravadas em uma modelo real, para que não perca nenhum detalhe + E-book com tudo explicado em imagens referente às videoaulas ministradas.</p>
       </div>
       <img className="p-3" src="./WhatsApp-Image-2023-01-12-at-11.webp" alt="" />
+
+      <div className="p-5 ">
+        <div className="border-4 rounded-3xl p-2 border-red-600 text-center bg-slate-950 shadow-red-600">
+          <p className="text-red-600 text-3xl font-semibold">Videoaulas + E-book</p>
+          <p className=" pl-5 pr-5 text-2xl font-semibold">23 Técnicas para fazer em uma mulher + Curso Lambida Perfeita</p>
+          <img className="mt-5 pr-10 pl-10 rounded-2xl " src="./Design-sem-nome-38-1024x1024.webp" alt="" />
+          <div className="text-center">
+            <p className="text-red-600 line-through text-3xl ">De R$197,00</p>
+            <p className=" text-3xl ">Por apenas</p>
+          </div>
+          <div className="flex text-center justify-center font-bold items-end">
+            <h3 className="text-2xl">R$</h3>
+            <h1 className="text-8xl">29</h1>
+            <h3 className="text-2xl">,90</h3>
+          </div>
+          <div className="text-center mt-5">
+            <Button className="p-10 rounded-full animate-bounce mb-10 mt-5" onClick={handleClick}>
+              <p>
+                <span className="text-2xl">COMPRAR AGORA</span>
+              </p>
+            </Button>
+          </div>
+        </div>
+        <div className="text-center">
+          <img className="m-auto p-3 size-48" src="./Selo-de-Garantia-de-7-Dias-PNG-T.webp" alt="" />
+          <p>
+            Se você seguir o passo a passo, aplicar e praticar o que eu ensinei, e mesmo assim não tiver resultados, basta enviar um e-mail para suporte@tabuquebrado.com.br pedindo o reembolso que nós
+            devolveremos o seu dinheiro. O prazo é de 7 dias, sem letras miúdas, simplesmente devolveremos!
+          </p>
+        </div>
+        <div className="text-sm text-gray-400 text-center mt-9">
+          <p>Todos os direitos reservados a TABU Quebrado</p>
+        </div>
+      </div>
     </ThemeProvider>
   );
 }
